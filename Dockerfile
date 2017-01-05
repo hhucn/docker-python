@@ -19,7 +19,7 @@ RUN echo "deb http://mirror.cs.uni-duesseldorf.de/debian/ jessie main contrib no
 
 # Install packages
 RUN apt-get update -qq && \
-    apt-get install -qqy locales
+    apt-get install -qqy locales libsasl2-dev python-dev libldap2-dev libssl-dev
 
 # Create locales
 RUN mv $locs $locs.bak && \
